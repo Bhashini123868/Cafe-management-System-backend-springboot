@@ -8,16 +8,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "admin")
-public class Admin {
+@Table(name = "inventory")
+public class InventoryEntity {
     @Id
-    private Long adminId;
-    private String adminName;
-    private String email;
-    private String role;
+    private Long inventoryId;
+    private Long menuId;
+    private Integer stockLevel;
+    private Date lastUpdate;
 }

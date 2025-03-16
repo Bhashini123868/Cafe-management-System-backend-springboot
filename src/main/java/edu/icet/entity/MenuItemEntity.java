@@ -13,13 +13,13 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "menuItem")
+public class MenuItemEntity {
     @Id
-    private Long userId;
-    private String userName;
-    private String password;
-    private String role;
-    private String email;
-    private String phoneNumber;
+    private Long menuId;
+    private String name;
+    private String description;
+    private Double price;
+    private String category;
+    private String imageUrl;
 }

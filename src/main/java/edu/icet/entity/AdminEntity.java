@@ -8,15 +8,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "recommendation")
-public class Recommendation {
+@Table(name = "admin")
+public class AdminEntity {
     @Id
-    private Long userId;
-    private List<MenuItem> recommendedItems;
+    private Long adminId;
+    private String adminName;
+    private String email;
+    private String role;
 }

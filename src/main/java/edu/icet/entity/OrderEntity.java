@@ -8,18 +8,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDate;
+import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "menuItem")
-public class MenuItem {
+@Table(name = "orders")
+public class OrderEntity {
     @Id
-    private Long menuId;
-    private String name;
-    private String description;
-    private Double price;
-    private String category;
-    private String imageUrl;
+    private Long orderId;
+    private Long userId;
+    private List<MenuItemEntity> menuItems;
+    private Double totalPrice;
+    private String orderStatus;
+    private LocalDate orderDate;
 }

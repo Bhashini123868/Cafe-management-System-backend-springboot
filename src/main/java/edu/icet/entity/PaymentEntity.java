@@ -8,16 +8,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "loyaltyPoints")
-public class LoyaltyPoints {
+@Table(name = "payment")
+public class PaymentEntity {
     @Id
-    private Long loyaltyId;
-    private Long userId;
-    private Integer points;
-    private String membershipLevel;
+    private Long paymentId;
+    private Long orderId;
+    private Double amount;
+    private String paymentMethod;
+    private String paymentStatus;
+    private LocalDate paymentDate;
 }

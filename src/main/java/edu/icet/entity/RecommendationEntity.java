@@ -8,20 +8,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.time.LocalDate;
 import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "orders")
-public class Order {
+@Table(name = "recommendation")
+public class RecommendationEntity {
     @Id
-    private Long orderId;
     private Long userId;
-    private List<MenuItem> menuItems;
-    private Double totalPrice;
-    private String orderStatus;
-    private LocalDate orderDate;
+    private List<MenuItemEntity> recommendedItems;
 }
