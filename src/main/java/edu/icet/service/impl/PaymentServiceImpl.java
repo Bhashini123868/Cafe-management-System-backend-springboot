@@ -17,12 +17,10 @@ public class PaymentServiceImpl implements PaymentService {
     private PaymentRepository paymentRepository;
     private ModelMapper mapper;
 
+
     @Override
     public Payment makePayment(Payment payment) {
-        {
-            PaymentEntity entity = mapper.map(payment, PaymentEntity.class);
-            PaymentEntity savedEntity = paymentRepository.save(entity);
-        return mapper.map(savedEntity, Payment.class);
+        return null;
     }
 
     @Override

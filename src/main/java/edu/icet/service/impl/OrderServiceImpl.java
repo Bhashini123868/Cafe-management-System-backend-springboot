@@ -41,6 +41,16 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public void updateOrderStatus(Long orderId) {
+
+    }
+
+    @Override
+    public List<Order> getOrderByStatus(String status) {
+        return List.of();
+    }
+
+    @Override
     public void updateOrderStatus(Long orderId, String status) {
         orderRepository.findById(orderId).ifPresent(order->{
             order.setOrderStatus(status);

@@ -21,7 +21,7 @@ public class InventoryServiceImpl implements InventoryService {
     @Override
     public Inventory addInventory(Inventory inventory) {
         InventoryEntity entity = mapper.map(inventory, InventoryEntity.class);
-        entity = inventoryRepository.save(entity)
+        entity = inventoryRepository.save(entity);
         return mapper.map(entity, Inventory.class);
     }
 
@@ -52,7 +52,7 @@ public class InventoryServiceImpl implements InventoryService {
     @Override
     public U getStockLevel(Long inventoryId) {
         Optional<InventoryRepository> entity = inventoryRepository.findById(inventoryId);
-        return entity.map(InventoryEntity::getStockLevel).orElse(0);
+         return entity.map(InventoryEntity::getStockLevel).orElse(0);
     }
 
     @Override
